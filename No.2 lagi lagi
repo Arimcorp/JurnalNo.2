@@ -1,0 +1,32 @@
+package no.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Praktikum
+ */
+public class No2 {
+
+   public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int awal, akhir, bil;  
+        System.out.println("Program Bilangan Prima");
+        System.out.print("Masukkan batas awal\t: "); awal=in.nextInt();
+        System.out.print("Masukkan batas akhir\t: "); akhir=in.nextInt();
+        System.out.printf("Deret bilangan prima antara %d dan %d \n", awal, akhir);
+        int ang=awal;
+        while (ang <= akhir) {
+            int tmp = 0;
+            for (int bagi = 2; bagi < ang; bagi++) {
+                if (ang%bagi==0) {
+                    tmp=1;
+                }
+            }
+            if (tmp != 1) {
+                System.out.println(ang); 
+                }
+            ang++;
+        }
+    }
+}
